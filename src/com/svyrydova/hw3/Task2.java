@@ -7,36 +7,31 @@ public class Task2 {
 
         while (true) {
 
-            String request1 = "Введите символ для вычисления";
-            System.out.println(request1);
+            System.out.println("Введите символ для вычисления");
             Scanner symb = new Scanner(System.in);
             String a = symb.nextLine();
             if (a.equals("0")) {
                 break;
             }
             System.out.println("Введите x");
-            int x = symb.nextInt();
+            double x = symb.nextDouble();
             System.out.println("Введите y");
-            int y = symb.nextInt();
+            double y = symb.nextDouble();
             switch (a) {
                 case ("+"):
-                    int z1 = x + y;
-                    System.out.println(z1);
+                    System.out.println(x + y);
                     break;
                 case ("-"):
-                    int z2 = x - y;
-                    System.out.println(z2);
+                    System.out.println(x - y);
                     break;
                 case ("*"):
-                    int z3 = x * y;
-                    System.out.println(z3);
+                    System.out.println(x * y);
                     break;
                 case ("/"):
                     if (y == 0) {
                         System.out.println("Делить на ноль нельзя");
                     } else {
-                        int z4 = x / y;
-                        System.out.println(z4);
+                        System.out.println(x / y);
                         break;
                     }
                 default:
