@@ -8,8 +8,8 @@ public class Task4 {
     public static void main(String[] args) {
 
         int j;
+        Scanner scan = new Scanner(System.in);
         do {
-            Scanner scan = new Scanner(System.in);
             System.out.println("Введите целое число больше 3");
             int input = scan.nextInt();
             j = input;
