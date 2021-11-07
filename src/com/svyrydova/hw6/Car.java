@@ -7,7 +7,9 @@ public class Car {
     private String colour;
     private double petrol;
 
-
+    public Engine getPowerType() {
+        return powerType;
+    }
 
     public Car(Manufacturer manufacturer, Engine powerType, String colour) {
         this.manufacturer = manufacturer;

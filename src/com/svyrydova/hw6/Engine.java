@@ -10,6 +10,10 @@ public class Engine {
         this.type = type;
     }
 
+    public double getPower() {
+        return power;
+    }
+
     @Override
     public String toString() {
         return "Engine{" +
