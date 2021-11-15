@@ -1,4 +1,4 @@
-package com.svyrydova.Modul1.Task2;
+package com.svyrydova.modul1.task2;
 
 import java.util.Arrays;
 

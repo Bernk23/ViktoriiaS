@@ -1,4 +1,4 @@
-package com.svyrydova.Modul1.Task1;
+package com.svyrydova.modul1.task1;
 
 import java.util.Random;
 
@@ -15,6 +15,7 @@ public class Array {
         return array;
 
     }
+
     public void bubbleSort(int[] num) {
         int j;
         boolean flag = true;
