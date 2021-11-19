@@ -15,7 +15,6 @@ public class Animal {
     private String[] present;
 
 
-
     public boolean isSick() {
         return sick;
     }
@@ -38,10 +37,6 @@ public class Animal {
 
     public void setHappy(double happy) {
         this.happy = happy;
-    }
-
-    public void setPresent(String[] present) {
-        this.present = present;
     }
 
     public Animal(String name, AnimalType type) {
@@ -121,13 +116,13 @@ public class Animal {
     }
 
 
-    public String[] presents() {
+    public void presents() {
         Random random = new Random();
         String gift = "Gift " + String.valueOf(random.nextInt(900));
         if (present[present.length - 1] != null) {
             String[] newPresent = new String[present.length + (present.length / 2)];
-            newPresent = Arrays.copyOf(present,present.length);
-            return newPresent;
+            newPresent = Arrays.copyOf(present, present.length);
+            this.present = newPresent;
         } else {
             for (int i = 0; i < present.length; i++) {
                 String temp = present[i];
@@ -137,7 +132,5 @@ public class Animal {
                 }
             }
         }
-        return present;
     }
 }
-
