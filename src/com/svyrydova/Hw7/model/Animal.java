@@ -46,7 +46,7 @@ public class Animal {
         this.type = type;
         this.age = 1;
         this.hungry = 100;
-        this.money = 10000;
+        this.money = 0;
         this.clear = 100;
         this.happy = 50;
         this.sick = false;
@@ -122,7 +122,7 @@ public class Animal {
         String gift = "Gift " + String.valueOf(random.nextInt(300));
         if (present[present.length - 1] != null) {
             String[] newPresent = new String[present.length + (present.length / 2)];
-            newPresent = Arrays.copyOf(present, present.length +1);
+            newPresent = Arrays.copyOf(present, present.length + 1);
             newPresent[present.length] = gift;
             this.present = newPresent;
         } else {
