@@ -12,7 +12,7 @@ public class Animal {
     private double clear;
     private double happy;
     private boolean sick;
-    String[] present;
+    private String[] present;
 
 
 
@@ -49,12 +49,13 @@ public class Animal {
         this.type = type;
         this.age = 1;
         this.hungry = 100;
-        this.money = 0;
+        this.money = 10000;
         this.clear = 100;
         this.happy = 50;
         this.sick = false;
-        this.present = new String[9];
+        this.present = new String[10];
     }
+
 
     @Override
     public String toString() {
@@ -125,6 +126,8 @@ public class Animal {
         String gift = "Gift " + String.valueOf(random.nextInt(900));
         if (present[present.length - 1] != null) {
             String[] newPresent = new String[present.length + (present.length / 2)];
+            newPresent = Arrays.copyOf(present,present.length);
+            return newPresent;
         } else {
             for (int i = 0; i < present.length; i++) {
                 String temp = present[i];
