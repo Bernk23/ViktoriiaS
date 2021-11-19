@@ -14,6 +14,8 @@ public class Animal {
     private boolean sick;
     private String[] present;
 
+    final Random random = new Random();
+
 
     public boolean isSick() {
         return sick;
@@ -48,7 +50,7 @@ public class Animal {
         this.clear = 100;
         this.happy = 50;
         this.sick = false;
-        this.present = new String[10];
+        this.present = new String[3];
     }
 
 
@@ -117,11 +119,11 @@ public class Animal {
 
 
     public void presents() {
-        Random random = new Random();
-        String gift = "Gift " + String.valueOf(random.nextInt(900));
+        String gift = "Gift " + String.valueOf(random.nextInt(300));
         if (present[present.length - 1] != null) {
             String[] newPresent = new String[present.length + (present.length / 2)];
-            newPresent = Arrays.copyOf(present, present.length);
+            newPresent = Arrays.copyOf(present, present.length +1);
+            newPresent[present.length] = gift;
             this.present = newPresent;
         } else {
             for (int i = 0; i < present.length; i++) {
