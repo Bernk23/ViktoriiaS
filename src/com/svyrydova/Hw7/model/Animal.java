@@ -1,5 +1,8 @@
 package com.svyrydova.Hw7.model;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class Animal {
     private final String name;
     private final AnimalType type;
@@ -9,18 +12,9 @@ public class Animal {
     private double clear;
     private double happy;
     private boolean sick;
-    private String presents;
+    String[] present;
 
-    public String getPresents() {
-        return presents;
-    }
 
-    public void setPresents(String presents) {
-        this.presents = presents;
-    }
-    public void addPresents(String presents) {
-        this.presents += " Подарок " + presents + ";";
-    }
 
     public boolean isSick() {
         return sick;
@@ -46,6 +40,10 @@ public class Animal {
         this.happy = happy;
     }
 
+    public void setPresent(String[] present) {
+        this.present = present;
+    }
+
     public Animal(String name, AnimalType type) {
         this.name = name;
         this.type = type;
@@ -55,7 +53,7 @@ public class Animal {
         this.clear = 100;
         this.happy = 50;
         this.sick = false;
-        this.presents = "";
+        this.present = new String[9];
     }
 
     @Override
@@ -69,7 +67,7 @@ public class Animal {
                 ", clear=" + clear +
                 ", happy=" + happy +
                 ", sick=" + sick +
-                ", presents=" + presents +
+                ", presents=" + Arrays.toString(present) +
                 '}';
     }
 
@@ -121,5 +119,22 @@ public class Animal {
         this.happy += happy;
     }
 
+
+    public String[] presents() {
+        Random random = new Random();
+        String gift = "Gift " + String.valueOf(random.nextInt(900));
+        if (present[present.length - 1] != null) {
+            String[] newPresent = new String[present.length + (present.length / 2)];
+        } else {
+            for (int i = 0; i < present.length; i++) {
+                String temp = present[i];
+                if (temp == null) {
+                    present[i] = gift;
+                    break;
+                }
+            }
+        }
+        return present;
+    }
 }
 
