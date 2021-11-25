@@ -30,7 +30,16 @@ public abstract class Car implements Recovery{
         }
         public abstract void getStatistics ();
 
-
+    @Override
+    public String toString() {
+        return "Car{" +
+                "series=" + series +
+                ", year=" + year +
+                ", colour=" + colour +
+                ", fuel=" + fuel +
+                ", expenditure=" + expenditure +
+                '}';
     }
+}
 
 

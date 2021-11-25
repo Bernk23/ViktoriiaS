@@ -1,11 +1,12 @@
 package com.svyrydova.hw10;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Truck extends Car {
-
-    private String cargo;
-    private String[] cargos = new String[10];
+    private Random random = new Random();
+    private String cargo = "cargo";
+    private String[] cargos = new String[7];
 
     public Truck(Series series, int year, Colour colour, double fuel) {
         super(series, year, colour, fuel);
@@ -17,21 +18,22 @@ public class Truck extends Car {
 
     public void shipmentCargo() {
         for (int i = 0; i < cargos.length; i++) {
-            cargos[i] = cargo;
+            cargos[i] = cargo + String.valueOf(random.nextInt(15));
+            System.out.println(cargos[i]);
         }
     }
 
     public void dischargeCargo() {
         for (int i = 0; i < cargos.length; i++) {
-            cargos[i] = null;
+            cargos[i] = null + String.valueOf(random.nextInt(15));;
+            System.out.println(cargos[i]);
         }
     }
 
     @Override
     public String toString() {
         return "Truck{" +
-                "cargo='" + cargo + '\'' +
-                ", cargos=" + Arrays.toString(cargos) +
+                "fuel=" + fuel +
                 '}';
     }
 
