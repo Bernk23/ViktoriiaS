@@ -8,8 +8,8 @@ public abstract class Car implements Recovery{
     private Series series;
     private int year;
     private Colour colour;
-    public double fuel;
-    public double expenditure = 10.0;
+    protected double fuel;
+    protected double expenditure = 10.0;
 
 
     public Car (Series series, int year, Colour colour, double fuel) {
@@ -24,7 +24,7 @@ public abstract class Car implements Recovery{
             if (fuel <= 0) {
                 return false;
             } else {
-                return true;
+                return (fuel <= 0);
             }
 
         }

@@ -11,7 +11,7 @@ public class Passenger {
     private String passenger = "Passenger " + String.valueOf(random.nextInt(15));
 
     public String getPassenger() {
-        return passenger = "Passenger " + String.valueOf(random.nextInt(15));
+        return passenger = "Passenger " + random.nextInt(15);
     }
 
 }
