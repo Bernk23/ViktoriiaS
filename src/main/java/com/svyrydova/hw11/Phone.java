@@ -1,37 +1,31 @@
 package com.svyrydova.hw11;
 
-import javax.swing.*;
 import java.util.Objects;
 
 public abstract class Phone implements PhoneMenu {
-    public Phone() {
+    protected Colour colour;
+    protected Year year;
 
+    public Phone(Colour colour, Year year) {
+        this.colour = colour;
+        this.year = year;
     }
 
-    abstract String call();
+    abstract public String call();
 
-    abstract String sms();
-
-
-    protected Variety variety;
-    protected Variety2 variety2;
-
-    public Phone(Variety variety, Variety2 variety2) {
-        this.variety = variety;
-        this.variety2 = variety2;
-    }
+    abstract public String sms();
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Phone phone = (Phone) o;
-        return variety == phone.variety && variety2 == phone.variety2;
+        return colour == phone.colour && year == phone.year;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(variety, variety2);
+        return Objects.hash(colour, year);
     }
 }
 

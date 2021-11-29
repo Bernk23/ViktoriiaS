@@ -14,7 +14,7 @@ public class Service {
         }
     }
 
-    public void giveMethod(Phone phone) {
+    public void tests(Phone phone) {
         if (phone instanceof Smartphone) {
             Smartphone smartphone = (Smartphone) phone;
             smartphone.flashlight();
@@ -38,7 +38,7 @@ public class Service {
             phone.menu();
             phone.call();
             phone.sms();
-            giveMethod(phone);
+            tests(phone);
         } else {
             System.out.println("All is ok");
         }

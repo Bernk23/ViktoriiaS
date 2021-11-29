@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Smartphone extends Phone {
     Scanner scanner = new Scanner(System.in);
     @Override
-    String call() {
+    public String call() {
 
         System.out.println("Введите номер абонента");
         String r = scanner.nextLine();
@@ -26,8 +26,8 @@ public class Smartphone extends Phone {
         System.out.println("Включить фонарь");
     }
 
-    public Smartphone(Variety variety, Variety2 variety2) {
-        super(variety, variety2);
+    public Smartphone(Colour colour, Year year) {
+        super(colour, year);
     }
     public String sms() {
         System.out.println("Введите ваше сообщение");

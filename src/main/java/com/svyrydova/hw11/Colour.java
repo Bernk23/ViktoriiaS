@@ -1,6 +1,6 @@
 package com.svyrydova.hw11;
 
-public enum Variety {
+public enum Colour {
 
     BLACK, RED, VIOLET
 

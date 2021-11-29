@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class RotaryPhone extends Phone{
 
     @Override
-    String call() {
+    public String call() {
 
 
     System.out.println("Наберите номер");
@@ -16,12 +16,12 @@ public class RotaryPhone extends Phone{
 
 
     @Override
-    String sms() {
+    public String sms() {
         return null;
     }
 
-    public RotaryPhone(Variety variety, Variety2 variety2){
-        super(variety, variety2);
+    public RotaryPhone(Colour colour, Year year){
+        super(colour, year);
     }
 
     public void circle() {
