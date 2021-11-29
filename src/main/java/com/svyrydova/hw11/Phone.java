@@ -12,10 +12,14 @@ public abstract class Phone implements PhoneMenu {
 
     abstract String sms();
 
-    protected String phone;
+
     protected Variety variety;
     protected Variety2 variety2;
-    protected String[] phoneArray;
+
+    public Phone(Variety variety, Variety2 variety2) {
+        this.variety = variety;
+        this.variety2 = variety2;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -28,13 +32,6 @@ public abstract class Phone implements PhoneMenu {
     @Override
     public int hashCode() {
         return Objects.hash(variety, variety2);
-    }
-
-    public Phone(Variety variety, Variety2 variety2) {
-        this.variety = variety;
-        this.variety2 = variety2;
-
-
     }
 }
 
