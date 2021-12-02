@@ -9,7 +9,7 @@ public class PhoneBook {
     public static Optional<Integer> getSearch(String phone) {
         for (int i = 0; i < PHONE_BOOK.length; i++) {
             if (PHONE_BOOK[i].equals(phone)) {
-                return Optional.of(i);
+                 return Optional.of(i);
             }
         }
         return Optional.empty();
