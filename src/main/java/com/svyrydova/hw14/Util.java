@@ -1,25 +1,22 @@
 package com.svyrydova.hw14;
 
-import lombok.Value;
-
-import java.util.Arrays;
 import java.util.List;
 
-public class Util<T> implements Multiplier<Number>{
+public class Util<T> implements Multiplier<Number> {
 
-T value;
+    T value;
 
-public void printHashCode(T e) {
+    public void printHashCode(T e) {
         System.out.println("HashCode: " + e.hashCode());
-        }
+    }
 
-public void save(T value) {
+    public void save(T value) {
         this.value = value;
-        }
+    }
 
-public T get() {
+    public T get() {
         return value;
-        }
+    }
 
 
     @Override
@@ -30,7 +27,7 @@ public T get() {
         return array;
     }
 
-    public <S extends Number> void sum(S one,S two) { // should work only with numbers
+    public <S extends Number> void sum(S one, S two) { // should work only with numbers
         System.out.println(one.doubleValue() + two.doubleValue());
     }
 
