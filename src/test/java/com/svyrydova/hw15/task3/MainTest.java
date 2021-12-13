@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 public class MainTest {
 
     @Test
-    public void addAnimal() {
+    public void addPeople() {
         List<String> testPeople = new ArrayList<>();
         Map<Integer, String> testMap = new HashMap<>();
         testPeople.add("Alex");
