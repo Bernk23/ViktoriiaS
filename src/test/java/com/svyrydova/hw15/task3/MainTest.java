@@ -11,8 +11,6 @@ import static org.junit.Assert.*;
 
 public class MainTest {
 
-    final private List<String> testPeople = new ArrayList<String>();
-
     @Test
     public void addAnimal() {
         List<String> testPeople = new ArrayList<>();
