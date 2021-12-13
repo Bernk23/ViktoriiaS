@@ -6,27 +6,49 @@ import static org.junit.Assert.*;
 
 public class MyListTest {
 
-    MyList<Integer> myList = new MyList<>();
+    final private MyList<Integer> myList = new MyList<>();
 
     @Test
     public void add() {
-        myList.add(10);
+        myList.add(12);
+        myList.add(12);
         myList.add(24);
-        myList.add(34);
-        myList.add(44);
-        String actual = myList.toString();
-        String expected = "MyList{head=MyNode{value=10}, tail=MyNode{value=44}}";
+        myList.add(28);
+        int actual = myList.getSize();
+        int expected = 4;
         assertEquals(expected, actual);
     }
 
     @Test
-    public void getFromLast() {
+    public void getLastFromLast() {
+        myList.add(10);
+        myList.add(12);
+        myList.add(24);
+        myList.add(61);
+        int actual = myList.getFromLast(61);
+        int expected = 3;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getFirstFromLast() {
+        myList.add(8);
+        myList.add(12);
+        myList.add(24);
+        myList.add(41);
+        int actual = myList.getFromLast(8);
+        int expected = 0;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getNullFromLast() {
         myList.add(10);
         myList.add(12);
         myList.add(24);
         myList.add(41);
-        int actual = myList.getFromLast(24);
-        int expected = 2;
+        Integer actual = myList.getFromLast(76);
+        Integer expected = null;
         assertEquals(expected, actual);
     }
 }

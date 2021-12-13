@@ -17,17 +17,11 @@ public class Main {
         System.out.println(getPeople(people));
     }
 
-    public static int getSize(List<String> newPeople, int i) {
-        int key = newPeople.get(i).length();
-        return key;
-    }
-
-    public static Map getPeople(List<String> newPeople) {
-        Map<Integer, String> hashAnimal = new HashMap<>();
-        for (int i = 0; i < newPeople.size(); i++) {
-            int key = getSize(newPeople, i);
-            hashAnimal.put(key, String.valueOf(newPeople.get(i)));
+    public static Map<Integer, String> getPeople(List<String> newPeople) {
+        Map<Integer, String> hashPeople = new HashMap<>();
+        for (String people : newPeople) {
+            hashPeople.put(people.length(), people);
         }
-        return hashAnimal;
+        return hashPeople;
     }
 }
